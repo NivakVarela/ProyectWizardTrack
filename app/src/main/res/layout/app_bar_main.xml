@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Wizardtrack.AppBarOverlay" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/content_main" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="754dp"
+        tools:context=".MainActivity">
+
+
+        <View
+            android:id="@+id/black_background"
+            android:layout_width="match_parent"
+            android:layout_height="281dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="#000000" />
+
+        <View
+            android:id="@+id/orange_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/black_background"
+            android:layout_marginTop="-4dp"
+            android:background="#FFA500" />
+
+        <View
+            android:id="@+id/black_background2"
+            android:layout_width="344dp"
+            android:layout_height="270dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="324dp"
+            android:background="#ACAAA9" />
+
+        <ProgressBar
+            android:id="@+id/barprogreso"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="214dp"
+            android:layout_height="181dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginBottom="346dp"
+            android:backgroundTint="#BD4141"
+            android:progressTint="#FFA500" />
+
+
+        <TextView
+            android:id="@+id/txtporcent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/black_background2"
+            android:layout_alignEnd="@+id/black_background2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="-133dp"
+            android:layout_marginEnd="145dp"
+            android:text="@string/mi_valor2"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/black_background2"
+            android:layout_alignBottom="@+id/black_background2"
+            android:layout_marginEnd="145dp"
+            android:layout_marginBottom="104dp"
+            android:text="%"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="174dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/black_background2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="203dp"
+            android:layout_marginBottom="3dp"
+            android:backgroundTint="#000000"
+            android:text="@string/gastos"
+            android:textSize="28sp" />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:layout_above="@+id/black_background2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="201dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="#000000"
+            android:text="@string/ingresos"
+        android:textSize="28sp" />
+
+
+        <TextView
+            android:id="@+id/txtDisponible"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="178dp"
+            android:layout_marginTop="274dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="424dp"
+            android:text="@string/mi_valor"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/TXTCOP"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/black_background2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="256dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="357dp"
+            android:text="@string/currency_cop"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="100dp"
+            android:layout_height="28dp"
+            android:layout_alignStart="@+id/black_background2"
+            android:layout_alignTop="@+id/black_background2"
+            android:layout_alignEnd="@+id/black_background2"
+            android:layout_alignBottom="@+id/black_background2"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="134dp"
+            android:layout_marginBottom="239dp"
+            android:text="Mes"
+            android:textColor="#FDFDFD"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="100dp"
+            android:layout_height="28dp"
+            android:layout_alignStart="@+id/black_background2"
+            android:layout_alignTop="@+id/black_background2"
+            android:layout_alignEnd="@+id/black_background2"
+            android:layout_alignBottom="@+id/black_background2"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="237dp"
+            android:layout_marginBottom="240dp"
+            android:text="Año"
+            android:textColor="#FDFDFD"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="100dp"
+            android:layout_height="28dp"
+            android:layout_alignStart="@+id/black_background2"
+            android:layout_alignTop="@+id/black_background2"
+            android:layout_alignEnd="@+id/black_background2"
+            android:layout_alignBottom="@+id/black_background2"
+            android:layout_marginStart="233dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="233dp"
+            android:text="Periodo"
+            android:textColor="#FDFDFD"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/botonplus"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_below="@+id/button2"
+            android:layout_alignStart="@+id/black_background2"
+            android:layout_alignEnd="@+id/black_background2"
+            android:layout_alignBottom="@+id/black_background2"
+            android:layout_marginStart="226dp"
+            android:layout_marginTop="205dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="#ACAAA9"
+            android:text="+"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
