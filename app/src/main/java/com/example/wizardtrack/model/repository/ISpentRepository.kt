@@ -10,18 +10,18 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface ISpentRepository {
-    @POST("SpentRestController/All")
+    @POST("SpentRest/All")
     suspend fun getAll(@Body user: UserDTO): List<Spent>
 
-    @POST("SpentRestController")
+    @POST("SpentRest")
     suspend fun saveSpent(@Body spent: Spent): Spent
 
-    @GET("SpentRestController/{id}/{idUser}")
+    @GET("SpentRest/{id}/{idUser}")
     suspend fun getSpent(@Path("id") id: Long, @Path("idUser") idUser: Long): Spent
 
-    @PUT("SpentRestController")
+    @PUT("SpentRest")
     suspend fun updateSpent(@Body spent: Spent): Spent
 
-    @DELETE("SpentRestController/{id}/{idUser}")
+    @DELETE("SpentRest/{id}/{idUser}")
     suspend fun deleteSpent(@Path("id") id: Long, @Path("idUser") idUser: Long): Spent
 }
