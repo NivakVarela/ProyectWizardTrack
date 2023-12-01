@@ -1,4 +1,4 @@
-package com.example.wizardtrack.ui.home
+package com.example.wizardtrack.view.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
