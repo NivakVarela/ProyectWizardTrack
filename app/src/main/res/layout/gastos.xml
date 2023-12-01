@@ -26,8 +26,10 @@
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/orange_background"
@@ -46,9 +48,9 @@
         android:id="@+id/imageView3"
         android:layout_width="56dp"
         android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="@+id/orange_background"
-        app:layout_constraintEnd_toEndOf="@+id/orange_background"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="@+id/orange_background"
         app:layout_constraintTop_toTopOf="@+id/orange_background"
         app:layout_constraintVertical_bias="0.0"
@@ -88,12 +90,12 @@
         android:text="GASTOS"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/orange_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/orange_background"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="@+id/orange_background"
-        app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.763" />
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
 
     <Button
         android:id="@+id/btningreso"
@@ -256,9 +258,13 @@
         android:id="@+id/imageView11"
         android:layout_width="98dp"
         android:layout_height="64dp"
-        app:srcCompat="@drawable/fecha"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="571dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856"
+        app:srcCompat="@drawable/fecha" />
 
     <TextView
         android:id="@+id/textView5"
@@ -347,7 +353,11 @@
         android:inputType="text"
         android:text="FECHA"
         android:textColor="#FAF8F8"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="579dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

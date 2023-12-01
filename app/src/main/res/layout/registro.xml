@@ -8,7 +8,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000">
+        android:background="#000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-67dp">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -105,19 +107,19 @@
             app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
             app:layout_constraintVertical_bias="0.167" />
 
-        <TextView
-            android:id="@+id/txtRegistro"
+        <Button
+            android:id="@+id/botonIniciarSesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="inciar sesión"
-            android:textColor="#F6A938"
-            android:textSize="18sp"
+            android:backgroundTint="#000000"
+            android:text="Iniciar sesión"
+            android:textColor="#FF9800"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.761"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.768" />
+            app:layout_constraintHorizontal_bias="0.426"
+            app:layout_constraintStart_toEndOf="@+id/txtolvido"
+            app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+            app:layout_constraintVertical_bias="0.104" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
