@@ -19,4 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login) // Cambia "R.layout.login" por el nombre real de tu archivo XML "login.xml"
     }
+
+
 }
