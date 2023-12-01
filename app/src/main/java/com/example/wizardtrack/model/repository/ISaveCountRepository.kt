@@ -10,18 +10,18 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface ISaveCountRepository {
-    @POST("SaveCountRestController/All")
+    @POST("SaveCountRest/All")
     suspend fun getAll(@Body user: UserDTO): List<SaveCount>
 
-    @POST("SaveCountRestController")
+    @POST("SaveCountRest")
     suspend fun saveSaveCount(@Body saveCount: SaveCount): SaveCount
 
-    @GET("SaveCountRestController/{id}/{idUser}")
+    @GET("SaveCountRest/{id}/{idUser}")
     suspend fun getSaveCount(@Path("id") id: Long, @Path("idUser") idUser: Long): SaveCount
 
-    @PUT("SaveCountRestController")
+    @PUT("SaveCountRest")
     suspend fun updateSaveCount(@Body saveCount: SaveCount): SaveCount
 
-    @DELETE("SaveCountRestController/{id}/{idUser}")
+    @DELETE("SaveCountRest/{id}/{idUser}")
     suspend fun deleteSaveCount(@Path("id") id: Long, @Path("idUser") idUser: Long): SaveCount
 }

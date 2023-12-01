@@ -10,18 +10,18 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface IDebtRepository {
-    @POST("DebtRestController/All")
+    @POST("DebtRest/All")
     suspend fun getAll(@Body user: UserDTO): List<Debt>
 
-    @POST("DebtRestController")
+    @POST("DebtRest")
     suspend fun saveDebt(@Body debt: Debt): Debt
 
-    @GET("DebtRestController/{id}/{idUser}")
+    @GET("DebtRest/{id}/{idUser}")
     suspend fun getDebt(@Path("id") id: Long, @Path("idUser") idUser: Long): Debt
 
-    @PUT("DebtRestController")
+    @PUT("DebtRest")
     suspend fun updateDebt(@Body debt: Debt): Debt
 
-    @DELETE("DebtRestController/{id}/{idUser}")
+    @DELETE("DebtRest/{id}/{idUser}")
     suspend fun deleteDebt(@Path("id") id: Long, @Path("idUser") idUser: Long): Debt
 }

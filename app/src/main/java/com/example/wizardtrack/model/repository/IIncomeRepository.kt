@@ -10,18 +10,18 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface IIncomeRepository {
-    @POST("IncomeRestController")
+    @POST("IncomeRest")
     suspend fun saveIncome(@Body income: Income): Income
 
-    @POST("IncomeRestController/All")
+    @POST("IncomeRest/All")
     suspend fun getAll(@Body user: UserDTO): List<Income>
 
-    @GET("IncomeRestController/{id}/{idUser}")
+    @GET("IncomeRest/{id}/{idUser}")
     suspend fun getIncome(@Path("id") id: Long, @Path("idUser") idUser: Long): Income
 
-    @PUT("IncomeRestController")
+    @PUT("IncomeRest")
     suspend fun updateIncome(@Body income: Income): Income
 
-    @DELETE("IncomeRestController/{id}/{idUser}")
+    @DELETE("IncomeRest/{id}/{idUser}")
     suspend fun deleteIncome(@Path("id") id: Long, @Path("idUser") idUser: Long): Income
 }
