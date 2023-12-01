@@ -8,6 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 class contentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.)
+        setContentView(R.layout.content)
     }
 }
