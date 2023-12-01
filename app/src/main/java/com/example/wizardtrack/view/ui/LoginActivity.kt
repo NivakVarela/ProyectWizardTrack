@@ -1,10 +1,12 @@
-package com.example.wizardtrack
+package com.example.wizardtrack.view.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
+import com.example.wizardtrack.R
+import com.example.wizardtrack.contentActivity
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
