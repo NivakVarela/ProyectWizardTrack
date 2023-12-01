@@ -8,7 +8,7 @@ data class Debt(
     var id: Long = 0,
     var idUser: Long = 0,
     var amount: BigDecimal = BigDecimal.ZERO,
-    var starDate: LocalDateTime = LocalDateTime.MIN
+    var starDate: LocalDateTime = LocalDateTime.MIN,
     var endDate: LocalDateTime = LocalDateTime.MIN,
     var interest: BigDecimal = BigDecimal.ZERO,
     var description: String? = null,
