@@ -1,13 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/menu/drawer_menu.xml -->
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <group android:checkableBehavior="single">
-        <!-- Define aquí tus elementos del menú -->
+
+        <!-- Items del menú -->
         <item
-            android:id="@+id/menu_item1"
-            android:title="Item 1" />
+            android:id="@+id/nav_home"
+            android:title="Inicio"
+            android:icon="@drawable/home" />
         <item
-            android:id="@+id/menu_item2"
-            android:title="Item 2" />
-        <!-- Agrega más elementos según sea necesario -->
+            android:id="@+id/nav_profile"
+            android:title="Perfil"
+            android:icon="@drawable/account" />
+
+        <!-- Submenú -->
+        <item
+            android:id="@+id/nav_submenu"
+            android:title="Submenú">
+            <menu>
+                <item
+                    android:id="@+id/nav_subitem1"
+                    android:title="Ingresos"
+                    android:icon="@drawable/income" />
+                <item
+                    android:id="@+id/nav_subitem2"
+                    android:title="Gastos"
+                    android:icon="@drawable/dollar" />
+            </menu>
+        </item>
+
+        <!-- Otro elemento del menú -->
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Configuración"
+            android:icon="@drawable/gear" />
+
     </group>
+
+    <!-- Elemento para Cerrar Sesión -->
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Cerrar Sesión"
+        android:icon="@drawable/logout"
+        android:layout_gravity="bottom|center_horizontal" />
+
 </menu>
+
+
