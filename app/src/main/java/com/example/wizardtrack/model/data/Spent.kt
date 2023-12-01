@@ -1,6 +1,5 @@
 package com.example.wizardtrack.model.data
 
-import org.threeten.bp.LocalDateTime
 import java.math.BigDecimal
 
 data class Spent(
@@ -8,7 +7,7 @@ data class Spent(
     var idUser: Long = 0,
     var amount: BigDecimal = BigDecimal.ZERO,
     var count: Long = 0,
-    var spentDate: LocalDateTime = LocalDateTime.MIN,
+    var spentDate: String  = "2000-01-01T00:00:00",
     var description: String? = null,
     var name: String = "",
     var idUserNavigation: UserWizardtrack? = null

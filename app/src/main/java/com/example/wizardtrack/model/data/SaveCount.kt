@@ -1,7 +1,6 @@
 package com.example.wizardtrack.model.data
 
 
-import org.threeten.bp.LocalDateTime
 import java.math.BigDecimal
 
 
@@ -9,8 +8,8 @@ data class SaveCount(
     var id: Long = 0,
     var idUser: Long = 0,
     var amount: BigDecimal = BigDecimal.ZERO,
-    var starDate: LocalDateTime = LocalDateTime.MIN,
-    var endDate: LocalDateTime = LocalDateTime.MIN,
+    var starDate: String  = "2000-01-01T00:00:00",
+    var endDate: String  = "2000-01-01T00:00:00",
     var description: String? = null,
     var name: String = "",
     var idUserNavigation: UserWizardtrack? = null
