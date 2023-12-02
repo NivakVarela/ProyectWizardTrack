@@ -15,4 +15,6 @@
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Cuentas</string>
     <string name="menu_slideshow">Graficos</string>
+    <string name="Notificacion">Recuerda registrar tus gastos e ingresos en WizardTrack para mantener el control de tus finanzas personales.</string>
+    <string name="Mensaje2">¡Hola, mago financiero!</string>
 </resources>

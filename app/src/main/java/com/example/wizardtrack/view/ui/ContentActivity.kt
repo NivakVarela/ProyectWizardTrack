@@ -1,14 +1,11 @@
-package com.example.wizardtrack
+package com.example.wizardtrack.view.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.navigation.NavigationView
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.wizardtrack.view.ui.PerfilActivity
-import com.example.wizardtrack.view.ui.ConfiguracionActivity
-import com.example.wizardtrack.view.ui.GastosActivity
-import com.example.wizardtrack.view.ui.IngresosActivity
+import com.example.wizardtrack.R
+import com.google.android.material.navigation.NavigationView
 
 class contentActivity : AppCompatActivity() {
 
@@ -48,11 +45,12 @@ class contentActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_logout -> {
-                    // Aquí puedes agregar el código para cerrar sesión si es necesario
+                    startActivity(Intent(this, LoginActivity::class.java))
                     true
                 }
                 else -> false
             }
         }
     }
+
 }
