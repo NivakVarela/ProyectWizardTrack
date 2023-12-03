@@ -117,72 +117,73 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53" />
 
-    <Button
-        android:id="@+id/btnGastos"
-        android:layout_width="129dp"
-        android:layout_height="53dp"
-        android:backgroundTint="#000000"
-        android:text="GASTOS"
-        android:textSize="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        <Button
+            android:id="@+id/btnGastos"
+            android:layout_width="165dp"
+            android:layout_height="52dp"
+            android:backgroundTint="#000000"
+            android:text="@string/gastos"
+            android:textSize="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.241" />
 
-    <Button
+        <Button
         android:id="@+id/btnIngresos"
         android:layout_width="169dp"
         android:layout_height="59dp"
         android:backgroundTint="#000000"
-        android:text="INGRESOS"
+
         android:textSize="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.244"
+        android:text="@string/ingresos" />
 
     <Button
         android:id="@+id/btnAño"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ABA9A8"
-        android:text="AÑO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintVertical_bias="0.341"
+        android:text="@string/anio" />
 
     <Button
         android:id="@+id/btnMes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ABA9A8"
-        android:text="Mes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintVertical_bias="0.341"
+        android:text="@string/mes" />
 
     <Button
         android:id="@+id/btnPeriodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ABA9A8"
-        android:text="periodo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.814"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.338"
+        android:text="@string/periodo" />
 
     <Button
         android:id="@+id/btnPlus"
