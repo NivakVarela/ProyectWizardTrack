@@ -9,14 +9,14 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FECHA"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.319"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.835" />
+        app:layout_constraintVertical_bias="0.835"
+        android:text="@string/fecha"/>
 
     <View
         android:id="@+id/black_background"
@@ -49,14 +49,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FEA400"
-        android:text="INGRESOS"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/black_background"
         app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="@+id/black_background"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.098"
+        android:text="@string/ingresos"/>
 
     <EditText
         android:id="@+id/txtinggasto"
@@ -88,7 +88,6 @@
         android:ems="10"
         android:foregroundTint="#881515"
         android:inputType="text"
-        android:text="C  O  M  E  N  T  A  R  I  O"
         android:textAlignment="center"
         android:textColor="#504C4C"
         android:textColorHint="#FFFEFE"
@@ -98,7 +97,8 @@
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/orange_background"
-        app:layout_constraintVertical_bias="0.672" />
+        app:layout_constraintVertical_bias="0.672"
+        android:text="@string/comentario"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -119,14 +119,14 @@
         android:layout_width="184dp"
         android:layout_height="70dp"
         android:backgroundTint="#FF9800"
-        android:text="AÑADIR"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtinggasto"
-        app:layout_constraintVertical_bias="0.964" />
+        app:layout_constraintVertical_bias="0.964"
+        android:text="@string/aniadir"/>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -192,53 +192,55 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salario"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.473"
+        android:text="@string/salario"/>
+
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Interes"
+
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.464"
+        android:text="@string/interes"/>
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pasivos"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.765"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintVertical_bias="0.465"
+        android:text="@string/pasivos"/>
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Otro"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.631" />
+        app:layout_constraintVertical_bias="0.631"
+        android:text="@string/otro"/>
 
     <EditText
         android:id="@+id/editTextText3"
@@ -247,21 +249,21 @@
         android:backgroundTint="#FAF6F6"
         android:ems="10"
         android:inputType="text"
-        android:text="FECHA"
         android:textColor="#FAF8F8"
         app:layout_constraintBottom_toBottomOf="@+id/black_background"
         app:layout_constraintEnd_toEndOf="@+id/black_background"
         app:layout_constraintHorizontal_bias="0.634"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/orange_background"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintVertical_bias="0.854"
+        android:text="@string/fecha"/>
 
     <Button
         android:id="@+id/btnGastosIngresos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
         android:backgroundTint="#FEA400"
-        android:text="GASTOS"
+        android:text="@string/gastos"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/black_background"
@@ -269,6 +271,7 @@
         app:layout_constraintStart_toStartOf="@+id/black_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.098" />
+
 
     <ImageButton
         android:id="@+id/cerrarIngresos"

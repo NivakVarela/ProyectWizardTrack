@@ -22,20 +22,19 @@
         android:id="@+id/cambioIdioma"
         android:layout_width="256dp"
         android:layout_height="49dp"
-        android:text="LENGUAJE"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.264"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.192"
+        android:text="@string/lenguaje"/>
 
     <TextView
         android:id="@+id/notificacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NOTIFICACION"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,20 +42,22 @@
         app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.288"
+        android:text="@string/notificacion"/>
 
     <Button
         android:id="@+id/btnNotificacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
-        android:text="ENVIAR"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.599"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+        app:layout_constraintVertical_bias="0.284"
+        android:text="@string/enviar"/>
 
     <ImageView
         android:id="@+id/imageView12"
@@ -69,4 +70,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.038"
         app:srcCompat="@drawable/gear" />
+
+    <ImageButton
+        android:id="@+id/cerrarConfiguracion"
+        android:layout_width="41dp"
+        android:layout_height="36dp"
+        android:backgroundTint="#FE9700"
+        android:onClick="cerrargastos"
+        app:layout_constraintBottom_toBottomOf="@+id/black_background2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 </androidx.constraintlayout.widget.ConstraintLayout>

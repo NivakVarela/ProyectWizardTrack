@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Wizardtrack</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="currency_cop">COP $</string>
+    <string name="mi_valor">0</string>
+    <string name="mi_valor2">1000000</string>
+
+
+    <string name="gastos">GASTOS</string>
+    <string name="ingresos">INGRESOS</string>
+    <string name="anio">AÑO</string>
+    <string name="mes">MES</string>
+    <string name="periodo">PERIODO</string>
+
+    <string name="iniciarsesion">INICIAR SESION</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="btnEntrar">ENTRAR</string>
+    <string name="olvidosucontrasenia">olvido su contraseña?</string>
+    <string name="btnregistrarse">REGISTRARSE</string>
+
+
+    <string name="register">REGISTRARSE</string>
+    <string name="correo">Correo</string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="tienesunacuenta">Tienes una cuenta?</string>
+    <string name="iniciarsesionregistro">Iniciar sesion</string>
+
+
+    <string name="subirfoto">Subir foto</string>
+    <string name="nombreusuario">Nombre de usuario</string>
+
+
+    <string name="fecha">Fecha</string>
+    <string name="comentario">C  O  M  E  N  T  A  R  I  O</string>
+    <string name="aniadir">Añadir</string>
+    <string name="compras">Compras</string>
+    <string name="vivienda">vivienda</string>
+    <string name="regalos">Regalos</string>
+    <string name="deudas">Deudas</string>
+    <string name="salud">Salud</string>
+    <string name="otro">Otro</string>
+
+
+    <string name="salario">Salario</string>
+    <string name="interes">Interes</string>
+    <string name="pasivos">Pasivos</string>
+
+
+    <string name="lenguaje">LENGUAJE</string>
+    <string name="notificacion">NOTIFICACION</string>
+    <string name="enviar">ENVIAR</string>
+
+
+
+
+
+
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Cuentas</string>
+    <string name="menu_slideshow">Graficos</string>
+    <string name="Notificacion">Recuerda registrar tus gastos e ingresos en WizardTrack para mantener el control de tus finanzas personales.</string>
+    <string name="Mensaje2">¡Hola, mago financiero!</string>
+</resources>

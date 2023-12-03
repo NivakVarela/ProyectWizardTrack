@@ -11,25 +11,41 @@ import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Switch
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.wizardtrack.R
+import java.util.Locale
 
 class ConfiguracionActivity: AppCompatActivity() {
 
     private val CHANNEL_ID = "my_channel_id"
     private val notificationId = 101
 
+    //LENGUAJE VARIABLE
+    private lateinit var switch: Switch
+
+
 
     private lateinit var txtnot: Button
+    private lateinit var txtnotificacion: TextView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.configuracion)
 
         txtnot = findViewById(R.id.btnNotificacion)
+        txtnotificacion = findViewById(R.id.notificacion)
+
+
+        //LANG
+        switch = findViewById(R.id.cambioIdioma)
 
 
         createNotificationChannel()
@@ -38,6 +54,36 @@ class ConfiguracionActivity: AppCompatActivity() {
         {
             sendNotification()
         }
+
+
+        //lang
+
+        switch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                Toast.makeText(this, "CHANGE TO ES", Toast.LENGTH_SHORT).show()
+                actualizarResource("es")
+            } else {
+                Toast.makeText(this, "CAMBIO A EN", Toast.LENGTH_SHORT).show()
+                actualizarResource("en")
+            }
+        }
+
+    }
+
+
+    //fun lang
+
+    fun actualizarResource(idioma: String) {
+
+        val recursos = resources
+        val displayMetrics = recursos.displayMetrics
+        val configuracion = resources.configuration
+        configuracion.setLocale(Locale(idioma))
+        recursos.updateConfiguration(configuracion, displayMetrics)
+        configuracion.locale = Locale(idioma)
+        resources.updateConfiguration(configuracion, displayMetrics)
+        txtnot.text = recursos.getString(R.string.enviar)
+        txtnotificacion.text = recursos.getString(R.string.notificacion)
 
     }
 
