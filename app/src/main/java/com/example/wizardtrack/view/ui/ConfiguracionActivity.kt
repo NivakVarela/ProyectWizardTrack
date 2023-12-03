@@ -1,15 +1,17 @@
 package com.example.wizardtrack.view.ui
 
-import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Switch
 import android.widget.TextView
@@ -21,97 +23,104 @@ import androidx.core.app.NotificationManagerCompat
 import com.example.wizardtrack.R
 import java.util.Locale
 
-class ConfiguracionActivity: AppCompatActivity() {
+class ConfiguracionActivity : AppCompatActivity() {
 
     private val CHANNEL_ID = "my_channel_id"
     private val notificationId = 101
 
-    //LENGUAJE VARIABLE
+    // LEER EL IDIOMA DESDE LAS PREFERENCIAS
+    private lateinit var sharedPreferences: SharedPreferences
+
+    // LENGUAJE VARIABLE
     private lateinit var switch: Switch
-
-
 
     private lateinit var txtnot: Button
     private lateinit var txtnotificacion: TextView
-
-
+    private lateinit var txtingreso: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.configuracion)
 
+        sharedPreferences = getPreferences(Context.MODE_PRIVATE)
+
         txtnot = findViewById(R.id.btnNotificacion)
         txtnotificacion = findViewById(R.id.notificacion)
 
-
-        //LANG
+        // LEER EL IDIOMA DESDE LAS PREFERENCIAS
+        val idiomaActual = sharedPreferences.getString("idioma", "en")
         switch = findViewById(R.id.cambioIdioma)
-
+        switch.isChecked = idiomaActual == "es"
 
         createNotificationChannel()
 
-        txtnot.setOnClickListener()
-        {
+        txtnot.setOnClickListener {
             sendNotification()
         }
 
-
-        //lang
-
         switch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                Toast.makeText(this, "CHANGE TO ES", Toast.LENGTH_SHORT).show()
-                actualizarResource("es")
-            } else {
-                Toast.makeText(this, "CAMBIO A EN", Toast.LENGTH_SHORT).show()
-                actualizarResource("en")
+            val nuevoIdioma = if (isChecked) "es" else "en"
+            cambiarIdioma(nuevoIdioma)
+
+            // GUARDAR EL IDIOMA EN LAS PREFERENCIAS
+            with(sharedPreferences.edit()) {
+                putString("idioma", nuevoIdioma)
+                apply()
             }
+
+            // Reiniciar la actividad solo si el idioma cambió
+            if (idiomaActual != nuevoIdioma) {
+                restartActivity()
+            }
+
+            Toast.makeText(this, "Idioma cambiado a $nuevoIdioma", Toast.LENGTH_SHORT).show()
         }
-
     }
 
-
-    //fun lang
-
-    fun actualizarResource(idioma: String) {
-
-        val recursos = resources
-        val displayMetrics = recursos.displayMetrics
+    private fun cambiarIdioma(idioma: String) {
         val configuracion = resources.configuration
-        configuracion.setLocale(Locale(idioma))
-        recursos.updateConfiguration(configuracion, displayMetrics)
-        configuracion.locale = Locale(idioma)
-        resources.updateConfiguration(configuracion, displayMetrics)
-        txtnot.text = recursos.getString(R.string.enviar)
-        txtnotificacion.text = recursos.getString(R.string.notificacion)
-
+        val nuevaConfiguracion = Configuration(configuracion)
+        nuevaConfiguracion.setLocale(Locale(idioma))
+        baseContext.resources.updateConfiguration(
+            nuevaConfiguracion,
+            baseContext.resources.displayMetrics
+        )
     }
 
+    private fun restartActivity() {
+        val intent = Intent(this, ConfiguracionActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+        finish()
+    }
 
-    private fun createNotificationChannel()
-    {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Notification Title"
             val descriptionText = "Notification Description"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
-                description=descriptionText
+                description = descriptionText
             }
-            val notificationManager : NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
     }
 
-    private fun sendNotification(){
+    private fun sendNotification() {
         val intent = Intent(this, ConfiguracionActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0,intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent: PendingIntent =
+            PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
-        val bitmap = BitmapFactory.decodeResource(applicationContext.resources,
+        val bitmap = BitmapFactory.decodeResource(
+            applicationContext.resources,
             R.drawable.logopng
         )
-        val bitmapLargeIcon = BitmapFactory.decodeResource(applicationContext.resources,
+        val bitmapLargeIcon = BitmapFactory.decodeResource(
+            applicationContext.resources,
             R.drawable.logopng
         )
 
@@ -124,30 +133,23 @@ class ConfiguracionActivity: AppCompatActivity() {
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
-        with(NotificationManagerCompat.from(this@ConfiguracionActivity))
-        {
+        with(NotificationManagerCompat.from(this@ConfiguracionActivity)) {
             if (ActivityCompat.checkSelfPermission(
                     this@ConfiguracionActivity,
-                    Manifest.permission.POST_NOTIFICATIONS
+                    android.Manifest.permission.POST_NOTIFICATIONS
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 return
             }
             notify(notificationId, builder.build())
         }
     }
 
-
+    fun cerrarconfig(view: View) {
+        val intent = Intent(this, contentActivity::class.java)
+        startActivity(intent)
+    }
 }
-
-
 
 
 

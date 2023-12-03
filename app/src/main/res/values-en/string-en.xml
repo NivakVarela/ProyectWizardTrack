@@ -9,6 +9,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="currency_cop">COP $</string>
+
+
     <string name="gastos">EXPENSES</string>
     <string name="mi_valor">0</string>
     <string name="mi_valor2">1000000</string>
@@ -54,6 +56,15 @@
     <string name="lenguaje">LANGUAGE</string>
     <string name="notificacion">NOTIFICATION</string>
     <string name="enviar">SEND</string>
+
+
+
+    <string name="inicio">HOME</string>
+    <string name="perfil">PROFILE</string>
+    <string name="ingresosmenu">INCOME</string>
+    <string name="gastosmenu">EXPENSES</string>
+    <string name="configuracionmenu">CONFIGURATION</string>
+    <string name="cerrarsesion">LOG OUT</string>
 
 
 

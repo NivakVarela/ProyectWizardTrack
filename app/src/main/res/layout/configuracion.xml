@@ -76,7 +76,7 @@
         android:layout_width="41dp"
         android:layout_height="36dp"
         android:backgroundTint="#FE9700"
-        android:onClick="cerrargastos"
+        android:onClick="cerrarconfig"
         app:layout_constraintBottom_toBottomOf="@+id/black_background2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.927"

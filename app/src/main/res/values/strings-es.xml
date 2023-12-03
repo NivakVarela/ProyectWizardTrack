@@ -57,6 +57,14 @@
     <string name="enviar">ENVIAR</string>
 
 
+    <string name="inicio">INICIO</string>
+    <string name="perfil">PERFIL</string>
+    <string name="ingresosmenu">INGRESOS</string>
+    <string name="gastosmenu">GASTOS</string>
+    <string name="configuracionmenu">CONFIGURACION</string>
+    <string name="cerrarsesion">CERRAR SESION</string>
+
+
 
 
 

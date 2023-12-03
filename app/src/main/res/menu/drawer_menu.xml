@@ -7,11 +7,12 @@
         <!-- Items del menú -->
         <item
             android:id="@+id/nav_home"
-            android:title="Inicio"
-            android:icon="@drawable/home" />
+            android:title="@string/inicio"
+            android:icon="@drawable/home"
+            />
         <item
             android:id="@+id/nav_profile"
-            android:title="Perfil"
+            android:title="@string/perfil"
             android:icon="@drawable/account" />
 
         <!-- Submenú -->
@@ -21,11 +22,11 @@
             <menu>
                 <item
                     android:id="@+id/nav_subitem1"
-                    android:title="Ingresos"
+                    android:title="@string/ingresosmenu"
                     android:icon="@drawable/income" />
                 <item
                     android:id="@+id/nav_subitem2"
-                    android:title="Gastos"
+                    android:title="@string/gastosmenu"
                     android:icon="@drawable/dollar" />
             </menu>
         </item>
@@ -33,7 +34,7 @@
         <!-- Otro elemento del menú -->
         <item
             android:id="@+id/nav_settings"
-            android:title="Configuración"
+            android:title="@string/configuracionmenu"
             android:icon="@drawable/gear" />
 
     </group>
@@ -41,7 +42,7 @@
     <!-- Elemento para Cerrar Sesión -->
     <item
         android:id="@+id/nav_logout"
-        android:title="Cerrar Sesión"
+        android:title="@string/cerrarsesion"
         android:icon="@drawable/logout"
         android:layout_gravity="bottom|center_horizontal" />
 
