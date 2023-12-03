@@ -146,7 +146,7 @@ class ConfiguracionActivity : AppCompatActivity() {
     }
 
     fun cerrarconfig(view: View) {
-        val intent = Intent(this, contentActivity::class.java)
+        val intent = Intent(this, ContentActivity::class.java)
         startActivity(intent)
     }
 }

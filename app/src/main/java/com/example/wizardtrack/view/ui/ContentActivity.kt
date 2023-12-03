@@ -7,14 +7,14 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.wizardtrack.R
+import com.example.wizardtrack.viewModel.CurrentSession
 import com.google.android.material.navigation.NavigationView
 
-class contentActivity : AppCompatActivity() {
+class ContentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content)
-
         // Referencia al DrawerLayout y NavigationView
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
@@ -25,12 +25,12 @@ class contentActivity : AppCompatActivity() {
         //botones que redirigen
         botonGasto.setOnClickListener {
             Log.d("LoginActivity", "Clic en el botón de entrar")
-            val intent = Intent(this@contentActivity, GastosActivity::class.java)
+            val intent = Intent(this@ContentActivity, GastosActivity::class.java)
             startActivity(intent)
         }
         botonIngresos.setOnClickListener {
             Log.d("LoginActivity", "Clic en el botón de entrar")
-            val intent = Intent(this@contentActivity, IngresosActivity::class.java)
+            val intent = Intent(this@ContentActivity, IngresosActivity::class.java)
             startActivity(intent)
         }
 
@@ -42,7 +42,7 @@ class contentActivity : AppCompatActivity() {
             // Manejar la selección del menú
             when (menuItem.itemId) {
                 R.id.nav_home -> {
-                    startActivity(Intent(this, contentActivity::class.java))
+                    startActivity(Intent(this, ContentActivity::class.java))
                     true
                 }
                 R.id.nav_profile -> {
@@ -62,6 +62,7 @@ class contentActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_logout -> {
+                    CurrentSession.user = null
                     startActivity(Intent(this, LoginActivity::class.java))
                     true
                 }

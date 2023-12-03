@@ -4,9 +4,6 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-
-
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -42,8 +39,7 @@
         </activity>
 
         <activity android:name=".view.ui.RegistroActivity"/>
-
-        <activity android:name=".view.ui.contentActivity"/>
+        <activity android:name=".view.ui.ContentActivity"/>
         <activity android:name=".view.ui.ConfiguracionActivity"/>
         <activity android:name=".view.ui.GastosActivity"/>
         <activity android:name=".view.ui.IngresosActivity"/>

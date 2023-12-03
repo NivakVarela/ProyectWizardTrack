@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.wizardtrack.R
 import com.example.wizardtrack.R.id.btnGastosIngresos
 import com.example.wizardtrack.R.id.btnIngresosIngresos
+import com.example.wizardtrack.viewModel.CurrentSession
 
 
 class IngresosActivity : AppCompatActivity() {
@@ -18,7 +19,8 @@ class IngresosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ingresos)
-
+        if(CurrentSession.user == null)
+            this.onBackPressed()
         val botonGastosclick= findViewById<Button>(btnGastosIngresos)
         val botonIngresosclick =findViewById<Button>(btnIngresosIngresos)
 
@@ -33,8 +35,11 @@ class IngresosActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    override fun onBackPressed() {
+        startActivity(Intent(this, LoginActivity::class.java))
+    }
     fun cerraringresos(view: View) {
-        val intent = Intent(this, contentActivity::class.java)
+        val intent = Intent(this, ContentActivity::class.java)
         startActivity(intent)
     }
 }

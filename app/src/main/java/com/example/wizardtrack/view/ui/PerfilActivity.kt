@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wizardtrack.R
+import com.example.wizardtrack.viewModel.CurrentSession
 
 class PerfilActivity : AppCompatActivity() {
 
@@ -27,6 +28,8 @@ class PerfilActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if(CurrentSession.user == null)
+            this.onBackPressed()
         setContentView(R.layout.perfil)
 
         profileImage = findViewById(R.id.profileImage)
@@ -38,5 +41,8 @@ class PerfilActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             getContent.launch(intent)
         }
+    }
+    override fun onBackPressed() {
+        startActivity(Intent(this, LoginActivity::class.java))
     }
 }
