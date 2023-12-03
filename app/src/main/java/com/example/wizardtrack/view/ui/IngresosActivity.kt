@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wizardtrack.R
@@ -31,5 +32,9 @@ class IngresosActivity : AppCompatActivity() {
             val intent = Intent(this@IngresosActivity, IngresosActivity::class.java)
             startActivity(intent)
         }
+    }
+    fun cerraringresos(view: View) {
+        val intent = Intent(this, contentActivity::class.java)
+        startActivity(intent)
     }
 }

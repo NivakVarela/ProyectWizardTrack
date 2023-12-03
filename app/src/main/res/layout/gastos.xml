@@ -39,48 +39,10 @@
         android:background="#FFA500"
         app:layout_constraintBottom_toBottomOf="@+id/black_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="@+id/black_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="56dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="@+id/orange_background"
-        app:layout_constraintTop_toTopOf="@+id/orange_background"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="162dp"
-        android:layout_height="20dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/orange_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="168dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/orange_background"
-        app:layout_constraintEnd_toEndOf="@+id/orange_background"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/orange_background"
-        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btngasto"
@@ -88,6 +50,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#FFA500"
         android:text="GASTOS"
+        android:onClick="abrirgastos"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,15 +65,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFA500"
+        android:onClick="abriringresos"
         android:text="INGRESOS"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/orange_background"
         app:layout_constraintEnd_toEndOf="@+id/orange_background"
-        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintHorizontal_bias="0.872"
         app:layout_constraintStart_toStartOf="@+id/orange_background"
         app:layout_constraintTop_toTopOf="@+id/black_background"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <EditText
         android:id="@+id/txtinggasto"
@@ -359,5 +323,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.849" />
+
+    <ImageButton
+        android:id="@+id/cerrarGastos"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#FEA400"
+        app:layout_constraintBottom_toBottomOf="@+id/black_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004"
+        android:onClick="cerrargastos"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
