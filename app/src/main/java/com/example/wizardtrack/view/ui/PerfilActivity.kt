@@ -3,6 +3,7 @@ package com.example.wizardtrack.view.ui
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -44,5 +45,10 @@ class PerfilActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         startActivity(Intent(this, LoginActivity::class.java))
+    }
+
+    fun cerrarPerfil(view: View) {
+        val intent = Intent(this, ContentActivity::class.java)
+        startActivity(intent)
     }
 }

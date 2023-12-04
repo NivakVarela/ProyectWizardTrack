@@ -65,7 +65,7 @@
     <string name="gastosmenu">EXPENSES</string>
     <string name="configuracionmenu">CONFIGURATION</string>
     <string name="cerrarsesion">LOG OUT</string>
-
+    <string name="nameusuario">Name</string>
 
 
     <string name="menu_home">HOME</string>
