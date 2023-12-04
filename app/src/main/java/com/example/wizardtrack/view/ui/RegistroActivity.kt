@@ -1,11 +1,7 @@
 package com.example.wizardtrack.view.ui
 
-import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -32,31 +28,17 @@ class RegistroActivity : AppCompatActivity() {
                 val response = serviceSession.signup(SignUpServiceDTO(name,email,password))
                 if(response.id != 0.toLong() ){
                     //Sesion iniciada
-                    mostrarAlertDialog(this@RegistroActivity, "Sesion iniciada")
+
                     CurrentSession.user = response
                     val intent = Intent(this@RegistroActivity, ContentActivity::class.java)
                     startActivity(intent)
                 }else{
                     //Sesion NO iniciada, response.name
-                    mostrarAlertDialog(this@RegistroActivity, "No se pudo iniciar sesion")
                     val intent = Intent(this@RegistroActivity, LoginActivity::class.java)
                     startActivity(intent)
                 }
             }
         }
     }
-    fun mostrarAlertDialog(context: Context, mensaje: String) {
-        val builder = AlertDialog.Builder(context)
-        builder.setMessage(mensaje)
 
-        // Crea y muestra el diálogo de alerta
-        val alertDialog: AlertDialog = builder.create()
-        alertDialog.show()
-
-        // Configura un temporizador para cerrar el diálogo después de 2 segundos
-        val handler = Handler(Looper.getMainLooper())
-        handler.postDelayed({
-            alertDialog.dismiss()
-        }, 2000)
-    }
 }
